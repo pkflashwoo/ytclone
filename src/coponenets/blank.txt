@@ -1,0 +1,63 @@
+ const handleNav=(n)=>{
+        clicked=n;
+        if(n===0){
+            SethoverStyle0({textDecoration:'underline',color:'white'})
+            SethoverStyle1({textDecoration:'none',color:'#808080'});
+            SethoverStyle2({textDecoration:'none',color:'#808080'});
+            
+        }
+        if(n===1){
+            SethoverStyle0({textDecoration:'none',color:'#808080'});
+            SethoverStyle1({textDecoration:'underline',color:'white'});
+            SethoverStyle2({textDecoration:'none',color:'#808080'});
+            
+
+        }
+        if(n===2){
+            SethoverStyle0({textDecoration:'none',color:'#808080'});
+            SethoverStyle1({textDecoration:'none',color:'#808080'});
+            SethoverStyle2({textDecoration:'underline',color:'white'});
+            
+        }
+        console.log("n is ",n);
+        console.log("clicked is",clicked);
+   
+
+    }
+    const hoverNaventer=(n)=>{
+        if(n===0&& !(n===clicked)){
+            SethoverStyle0({textDecoration:'none',color:'white'})
+            
+       
+        }
+        if(n===1 && !(n===clicked)){
+           
+            SethoverStyle1({textDecoration:'none',color:'white'});
+            
+
+        }
+        if(n===2 && !(n===clicked)){
+           
+            SethoverStyle2({textDecoration:'none',color:'white'});
+        }
+        
+
+    }
+    const hoverNavLeave=(n)=>{
+        if(n===0 && !(n===clicked)){
+            SethoverStyle0({textDecoration:'none',color:'#808080'})
+            
+       
+        }
+        if(n===1 && !(n===clicked)){
+           
+            SethoverStyle1({textDecoration:'none',color:'#808080'});
+            
+
+        }
+        if(n===2 && !(n===clicked)){
+           
+            SethoverStyle2({textDecoration:'none',color:'#808080'});
+        }
+
+    }
